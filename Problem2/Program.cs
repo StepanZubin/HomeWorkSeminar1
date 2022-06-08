@@ -9,15 +9,35 @@ Console.WriteLine("Введите второе число: ");
 double num2 = Convert.ToDouble(Console.ReadLine());
 Console.WriteLine("Введите третье число: "); 
 double num3 = Convert.ToDouble(Console.ReadLine());
+double maxNumberA = num2;
+double maxNumberB = num3;
+double maxNumberAB;
 
-double maxNumber = num1;
+if (num1 > maxNumberA)
+{
+   maxNumberA = num1;
+}
+    else 
+    {
+        maxNumberA = num2;
+    }
 
-if (num2 > maxNumber)
+if (num1 > maxNumberB)
 {
-   maxNumber = num2;
+    maxNumberB = num1;
 }
-else if (num3 > maxNumber)
+    else 
+    {
+        maxNumberB = num3;
+    }
+
+if (maxNumberA > maxNumberB)
 {
-    maxNumber = num3;
+    maxNumberAB = maxNumberA;
 }
-Console.Write( " Максимальное число: " + maxNumber);
+    else 
+    {
+        maxNumberAB = maxNumberB;
+    }
+
+Console.Write( " Максимальное число: " + maxNumberAB);
